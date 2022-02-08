@@ -6,8 +6,20 @@
          </div>
          <div class="social">
             <h2>FOLLOW US</h2>
-            <a v-for="logo in social" :key="logo.name" href="#">
-               <img :src="`../assets/img/${logo.img}.png`" :alt="logo.name" />
+            <a href="#">
+               <img src="../assets/img/footer-facebook.png" alt="facebook" />
+            </a>
+            <a href="#">
+               <img src="../assets/img/footer-periscope.png" alt="periscope" />
+            </a>
+            <a href="#">
+               <img src="../assets/img/footer-pinterest.png" alt="pinterest" />
+            </a>
+            <a href="#">
+               <img src="../assets/img/footer-twitter.png" alt="twitter" />
+            </a>
+            <a href="#">
+               <img src="../assets/img/footer-youtube.png" alt="youtube" />
             </a>
          </div>
       </div>
@@ -46,6 +58,10 @@ export default {
          display: flex;
          justify-content: space-between;
          align-items: center;
+
+         a {
+            margin-left: 15px;
+         }
       }
    }
 
