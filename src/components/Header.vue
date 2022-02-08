@@ -3,6 +3,7 @@
       <nav class="container">
          <!-- Left part with logo -->
          <div><img src="../assets/img/dc-logo.png" alt="DC Logo" /></div>
+         <!-- Right part with list -->
          <div>
             <ul>
                <li v-for="item in navList" :key="item.url">
@@ -40,13 +41,13 @@ export default {
 <style scoped lang="scss">
 header {
    height: 120px;
-   border: 1px solid black;
-}
-header nav {
-   height: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+
+   nav {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
 }
 ul {
    display: flex;
@@ -55,8 +56,11 @@ ul {
 li {
    list-style: none;
    margin-left: 1.2rem;
-}
-li a {
-   text-decoration: none;
+
+   a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+   }
 }
 </style>
