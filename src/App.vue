@@ -34,7 +34,7 @@ export default {
    box-sizing: border-box;
 }
 body {
-   font-family: Avenir, Helvetica, Arial, sans-serif;
+   font-family: "Oswald", sans-serif;
    height: 100vh;
 }
 img {
@@ -42,10 +42,15 @@ img {
    height: auto;
 }
 
+/* UTILS */
 .container {
    width: 100%;
    height: 100%;
    max-width: 1200px;
    margin: 0 auto;
+}
+
+.w-50 {
+   width: 50%;
 }
 </style>
