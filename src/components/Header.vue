@@ -4,7 +4,7 @@
          <!-- Left part with logo -->
          <div><img src="../assets/img/dc-logo.png" alt="DC Logo" /></div>
          <!-- Right part with list -->
-         <div>
+         <div class="list-nav">
             <ul>
                <li v-for="item in navList" :key="item.url">
                   <a :href="item.url">{{ item.text }}</a>
@@ -49,9 +49,13 @@ header {
       align-items: center;
    }
 }
+.list-nav {
+   height: 100%;
+}
 ul {
    display: flex;
    text-transform: uppercase;
+   height: 100%;
 }
 li {
    list-style: none;
@@ -61,6 +65,17 @@ li {
       text-decoration: none;
       color: black;
       font-weight: 600;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #fff;
+
+      &:hover {
+         border-bottom: 3px solid #0282f9;
+      }
+      &:active {
+         border-bottom: 3px solid #0282f9;
+      }
    }
 }
 </style>
