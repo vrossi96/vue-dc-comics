@@ -19,3 +19,8 @@
    justify-content: space-around;
    align-items: center;
 }
+@mixin bg_cov_norep_cent() {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}

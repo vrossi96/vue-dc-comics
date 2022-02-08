@@ -73,19 +73,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_mixins.scss";
+
 #top-footer {
    color: #fff;
    height: 100vh;
    max-height: calc(100vh - 500px);
    background: url(../assets/img/footer-bg.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
+   @include bg_cov_norep_cent();
 
    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex_ycenter_spaced();
    }
 
    .logo {
@@ -94,6 +92,13 @@ export default {
       background-repeat: no-repeat;
       background-position: center;
    }
+}
+.list-container {
+   width: 40%;
+   max-height: 80%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
 }
 .footer-list {
    padding: 0 15px 15px 0;
@@ -111,11 +116,5 @@ li {
       color: rgb(141, 141, 141);
       font-weight: 300;
    }
-}
-.list-container {
-   max-height: 80%;
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
 }
 </style>

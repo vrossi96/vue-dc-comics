@@ -45,8 +45,7 @@ export default {
 
    .card {
       height: 50%;
-      display: flex;
-      align-items: center;
+      @include flex_center("y");
       cursor: pointer;
 
       img {

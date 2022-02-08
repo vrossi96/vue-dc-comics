@@ -44,20 +44,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_mixins.scss";
+
 #bottom-footer {
    height: 120px;
    background-color: #303030;
    color: #fff;
 
    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex_ycenter_spaced();
 
       .social {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
+         @include flex_ycenter_spaced();
 
          a {
             margin-left: 15px;
