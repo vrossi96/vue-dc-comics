@@ -7,7 +7,7 @@
          <div class="list-nav">
             <ul>
                <li v-for="item in navList" :key="item.url">
-                  <a :href="item.url">{{ item.text }}</a>
+                  <a :href="item.url" :class="{ active: item.active }">{{ item.text }}</a>
                </li>
             </ul>
          </div>
@@ -22,16 +22,16 @@ export default {
    data() {
       return {
          navList: [
-            { text: "characters", url: "#" },
-            { text: "comics", url: "#" },
-            { text: "movies", url: "#" },
-            { text: "tv", url: "#" },
-            { text: "games", url: "#" },
-            { text: "collectibles", url: "#" },
-            { text: "videos", url: "#" },
-            { text: "fans", url: "#" },
-            { text: "news", url: "#" },
-            { text: "shop", url: "#" },
+            { text: "characters", url: "#", active: true },
+            { text: "comics", url: "#", active: false },
+            { text: "movies", url: "#", active: false },
+            { text: "tv", url: "#", active: false },
+            { text: "games", url: "#", active: false },
+            { text: "collectibles", url: "#", active: false },
+            { text: "videos", url: "#", active: false },
+            { text: "fans", url: "#", active: false },
+            { text: "news", url: "#", active: false },
+            { text: "shop", url: "#", active: false },
          ],
       };
    },
@@ -77,5 +77,8 @@ li {
          border-bottom: 3px solid #0282f9;
       }
    }
+}
+.active {
+   border-bottom: 3px solid #0282f9;
 }
 </style>
