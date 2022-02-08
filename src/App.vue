@@ -1,14 +1,19 @@
 <template>
-   <Header />
+   <div id="App">
+      <Header />
+      <TopJumbo />
+   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import TopJumbo from "./components/TopJumbo.vue";
 
 export default {
    name: "App",
    components: {
       Header,
+      TopJumbo,
    },
 };
 </script>
@@ -30,6 +35,7 @@ img {
 
 .container {
    width: 100%;
+   height: 100%;
    max-width: 1200px;
    margin: 0 auto;
 }
