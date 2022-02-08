@@ -39,14 +39,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_mixins.scss";
+
 header {
    height: 120px;
 
    .container {
       height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex_ycenter_spaced();
    }
 }
 .list-nav {
@@ -66,8 +66,7 @@ li {
       color: black;
       font-weight: 600;
       height: 100%;
-      display: flex;
-      align-items: center;
+      @include flex_center("y");
       border-bottom: 3px solid #fff;
 
       &:hover {

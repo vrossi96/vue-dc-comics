@@ -32,15 +32,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_mixins.scss";
+
 #bottom-jumbo {
    height: 140px;
    background-color: #0282f9;
    color: #fff;
 
    .container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      @include flex_ycenter_space_around();
    }
 
    .card {

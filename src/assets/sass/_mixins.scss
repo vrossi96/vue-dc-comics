@@ -1,0 +1,21 @@
+@mixin flex_center($axis: "xy") {
+   display: flex;
+   @if $axis == "x" {
+      justify-content: center;
+   } @else if $axis == "y" {
+      align-items: center;
+   } @else {
+      justify-content: center;
+      align-items: center;
+   }
+}
+@mixin flex_ycenter_spaced() {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin flex_ycenter_space_around() {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}

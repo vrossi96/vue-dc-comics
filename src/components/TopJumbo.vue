@@ -13,6 +13,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_mixins.scss";
+
 #top-jumbo {
    height: 120px;
    background-color: #1c1c1c;
@@ -21,6 +23,7 @@ export default {
    .container {
       display: flex;
       align-items: center;
+      @include flex_center("y");
    }
 }
 </style>
