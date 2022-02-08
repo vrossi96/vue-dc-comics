@@ -77,6 +77,7 @@ export default {
       font-weight: 500;
       color: #0282f9;
       padding-right: 15px;
+      padding-bottom: 5px;
    }
 }
 </style>
