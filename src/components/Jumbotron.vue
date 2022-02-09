@@ -6,15 +6,8 @@
             <h2>Current series</h2>
          </div>
          <!-- CARDS HERE -->
-         <div class="card-container">
-            <div v-for="card in comicsList" :key="card.series" class="card">
-               <a href="#">
-                  <div class="pic">
-                     <img :src="card.thumb" :alt="card.series" />
-                  </div>
-                  <p>{{ card.series }}</p>
-               </a>
-            </div>
+         <div v-if="comicsList.length" class="card-container">
+            <Card v-for="comicCard in comicsList" :key="comicCard.series" :comic="comicCard" />
          </div>
          <div class="button-cont">
             <a class="button" href="#">load more</a>
@@ -24,9 +17,14 @@
 </template>
 
 <script>
+import Card from "./Card.vue";
+
 export default {
    name: "Jumbotron",
    props: ["comicsList"],
+   components: {
+      Card,
+   },
 };
 </script>
 
@@ -78,22 +76,6 @@ export default {
          width: 100%;
          @include flex_center("y");
          flex-wrap: wrap;
-      }
-      .card {
-         width: calc(100% / 6 - 30px);
-         height: 260px;
-         margin: 20px 15px;
-
-         .pic {
-            height: 190px;
-            width: 100%;
-            overflow: hidden;
-            margin-bottom: 20px;
-         }
-
-         p {
-            text-transform: uppercase;
-         }
       }
    }
 }
