@@ -1,9 +1,9 @@
 <template>
    <div id="services-section">
       <div class="container">
-         <div v-for="(card, index) in services" :key="index" class="card">
-            <img :src="require(`../assets/img/${card.img}`)" :alt="card.name" />
-            <h3>{{ card.name }}</h3>
+         <div v-for="(badge, index) in services" :key="index" class="badge">
+            <img :src="require(`../assets/img/${badge.img}`)" :alt="badge.name" />
+            <h3>{{ badge.name }}</h3>
          </div>
       </div>
    </div>
@@ -38,7 +38,7 @@ export default {
       @include flex_ycenter_space_around();
    }
 
-   .card {
+   .badge {
       height: 50%;
       @include flex_center("y");
       cursor: pointer;
