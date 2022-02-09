@@ -22,11 +22,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_vars.scss";
 @import "../assets/sass/_mixins.scss";
 
 #services-section {
    height: 140px;
-   background-color: #0282f9;
+   background-color: $blue-dc;
    color: #fff;
 
    .container {

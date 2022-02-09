@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_vars.scss";
 @import "../assets/sass/_mixins.scss";
 
 #bottom-footer {
@@ -48,13 +49,13 @@ export default {
       text-decoration: none;
       font-size: 25px;
       padding: 10px 20px;
-      border: 2px solid #0282f9;
+      border: 2px solid $blue-dc;
       color: white;
    }
 
    h2 {
       font-weight: 500;
-      color: #0282f9;
+      color: $blue-dc;
       padding-right: 15px;
       padding-bottom: 5px;
    }

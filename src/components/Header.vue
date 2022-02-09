@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_vars.scss";
 @import "../assets/sass/_mixins.scss";
 
 header {
@@ -58,15 +59,15 @@ ul {
          border-bottom: 3px solid #fff;
 
          &:hover {
-            border-bottom: 3px solid #0282f9;
+            border-bottom: 3px solid $blue-dc;
          }
          &:active {
-            border-bottom: 3px solid #0282f9;
+            border-bottom: 3px solid $blue-dc;
          }
       }
 
       .active {
-         border-bottom: 3px solid #0282f9;
+         border-bottom: 3px solid $blue-dc;
       }
    }
 }

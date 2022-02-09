@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/sass/_vars.scss";
 @import "../assets/sass/_mixins.scss";
 
 #jumbotron {
@@ -50,7 +51,7 @@ export default {
          left: 0;
          transform: translateY(-50%);
          padding: 10px 25px;
-         background-color: #0282f9;
+         background-color: $blue-dc;
 
          h2 {
             text-transform: uppercase;
@@ -61,7 +62,7 @@ export default {
 
          .button {
             padding: 10px 75px;
-            background-color: #0282f9;
+            background-color: $blue-dc;
             display: inline-block;
          }
       }
