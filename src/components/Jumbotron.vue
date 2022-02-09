@@ -2,6 +2,9 @@
    <div id="jumbotron">
       <div class="jumbo-top-bg"></div>
       <div class="container">
+         <div class="label">
+            <h2>Current series</h2>
+         </div>
          <div v-for="card in comics" :key="card.series" class="card">
             <a href="#">
                <div class="pic">
@@ -105,14 +108,29 @@ export default {
    background-color: #1c1c1c;
    color: #fff;
 
-   .container {
-      @include flex_center("y");
-      flex-wrap: wrap;
-   }
    .jumbo-top-bg {
       height: 500px;
       background-image: url(../assets/img/jumbotron.jpg);
       background-position: center top;
+   }
+   .container {
+      @include flex_center("y");
+      flex-wrap: wrap;
+      padding: 30px 0;
+      position: relative;
+
+      .label {
+         position: absolute;
+         top: 0;
+         left: 0;
+         transform: translateY(-50%);
+         padding: 10px 25px;
+         background-color: #0282f9;
+      }
+   }
+
+   h2 {
+      text-transform: uppercase;
    }
 
    a {
