@@ -5,13 +5,19 @@
          <div class="label">
             <h2>Current series</h2>
          </div>
-         <div v-for="card in comics" :key="card.series" class="card">
-            <a href="#">
-               <div class="pic">
-                  <img :src="card.thumb" :alt="card.series" />
-               </div>
-               <p>{{ card.series }}</p>
-            </a>
+         <!-- CARDS HERE -->
+         <div class="card-container">
+            <div v-for="card in comics" :key="card.series" class="card">
+               <a href="#">
+                  <div class="pic">
+                     <img :src="card.thumb" :alt="card.series" />
+                  </div>
+                  <p>{{ card.series }}</p>
+               </a>
+            </div>
+         </div>
+         <div class="button-cont">
+            <a class="button" href="#">load more</a>
          </div>
       </div>
    </div>
@@ -114,8 +120,6 @@ export default {
       background-position: center top;
    }
    .container {
-      @include flex_center("y");
-      flex-wrap: wrap;
       padding: 30px 0;
       position: relative;
 
@@ -127,6 +131,15 @@ export default {
          padding: 10px 25px;
          background-color: #0282f9;
       }
+      .button-cont {
+         @include flex_center("x");
+
+         .button {
+            padding: 10px 75px;
+            background-color: #0282f9;
+            display: inline-block;
+         }
+      }
    }
 
    h2 {
@@ -136,8 +149,14 @@ export default {
    a {
       text-decoration: none;
       color: #fff;
+      text-transform: uppercase;
    }
    // *****************CARDS
+   .card-container {
+      width: 100%;
+      @include flex_center("y");
+      flex-wrap: wrap;
+   }
    .card {
       width: calc(100% / 6 - 30px);
       height: 260px;
