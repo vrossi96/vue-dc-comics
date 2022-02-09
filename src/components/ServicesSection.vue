@@ -1,7 +1,7 @@
 <template>
    <div id="services-section">
       <div class="container">
-         <div v-for="(badge, index) in services" :key="index" class="badge">
+         <div v-for="(badge, index) in servicesList" :key="index" class="badge">
             <img :src="require(`../assets/img/${badge.img}`)" :alt="badge.name" />
             <h3>{{ badge.name }}</h3>
          </div>
@@ -12,16 +12,9 @@
 <script>
 export default {
    name: "ServicesSection",
+   props: ["servicesList"],
    data() {
-      return {
-         services: [
-            { name: "Digital comics", img: "buy-comics-digital-comics.png" },
-            { name: "merchandise", img: "buy-comics-merchandise.png" },
-            { name: "comic shop locator", img: "buy-comics-shop-locator.png" },
-            { name: "subscriptions", img: "buy-comics-subscriptions.png" },
-            { name: "dc power visa", img: "buy-dc-power-visa.svg" },
-         ],
-      };
+      return {};
    },
 };
 </script>

@@ -17,16 +17,9 @@
 <script>
 export default {
    name: "BottomFooter",
+   props: ["social"],
    data() {
-      return {
-         social: [
-            { name: "facebook", img: "facebook" },
-            { name: "periscope", img: "periscope" },
-            { name: "pinterest", img: "pinterest" },
-            { name: "twitter", img: "twitter" },
-            { name: "youtube", img: "youtube" },
-         ],
-      };
+      return {};
    },
 };
 </script>

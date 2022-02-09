@@ -6,7 +6,7 @@
          <!-- Right part with list -->
          <div class="list-nav">
             <ul>
-               <li v-for="item in navList" :key="item.url">
+               <li v-for="item in headerNavList" :key="item.url">
                   <a :href="item.url" :class="{ active: item.active }">{{ item.text }}</a>
                </li>
             </ul>
@@ -18,22 +18,10 @@
 <script>
 export default {
    name: "Header",
+   props: ["headerNavList"],
    components: {},
    data() {
-      return {
-         navList: [
-            { text: "characters", url: "#", active: true },
-            { text: "comics", url: "#", active: false },
-            { text: "movies", url: "#", active: false },
-            { text: "tv", url: "#", active: false },
-            { text: "games", url: "#", active: false },
-            { text: "collectibles", url: "#", active: false },
-            { text: "videos", url: "#", active: false },
-            { text: "fans", url: "#", active: false },
-            { text: "news", url: "#", active: false },
-            { text: "shop", url: "#", active: false },
-         ],
-      };
+      return {};
    },
 };
 </script>
@@ -56,28 +44,30 @@ ul {
    display: flex;
    text-transform: uppercase;
    height: 100%;
-}
-li {
-   list-style: none;
-   margin-left: 1.2rem;
 
-   a {
-      text-decoration: none;
-      color: black;
-      font-weight: 600;
-      height: 100%;
-      @include flex_center("y");
-      border-bottom: 3px solid #fff;
+   li {
+      list-style: none;
+      margin-left: 1.2rem;
 
-      &:hover {
-         border-bottom: 3px solid #0282f9;
+      a {
+         text-decoration: none;
+         color: black;
+         font-weight: 600;
+         height: 100%;
+         @include flex_center("y");
+         border-bottom: 3px solid #fff;
+
+         &:hover {
+            border-bottom: 3px solid #0282f9;
+         }
+         &:active {
+            border-bottom: 3px solid #0282f9;
+         }
       }
-      &:active {
+
+      .active {
          border-bottom: 3px solid #0282f9;
       }
    }
-}
-.active {
-   border-bottom: 3px solid #0282f9;
 }
 </style>

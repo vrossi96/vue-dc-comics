@@ -19,55 +19,9 @@
 <script>
 export default {
    name: "TopFooter",
+   props: ["topFooterList"],
    data() {
-      return {
-         topFooterList: [
-            {
-               text: "dc comics",
-               list: [
-                  { text: "Characters", url: "#" },
-                  { text: "Comics", url: "#" },
-                  { text: "Movies", url: "#" },
-                  { text: "TV", url: "#" },
-                  { text: "Games", url: "#" },
-                  { text: "Videos", url: "#" },
-                  { text: "News", url: "#" },
-               ],
-            },
-            {
-               text: "shop",
-               list: [
-                  { text: "Shop DC", url: "#" },
-                  { text: "Shop DC Collectibles", url: "#" },
-               ],
-            },
-            {
-               text: "dc",
-               list: [
-                  { text: "Terms Of Use", url: "#" },
-                  { text: "Privacy policy(New)", url: "#" },
-                  { text: "Ad Choice", url: "#" },
-                  { text: "Advertising", url: "#" },
-                  { text: "Jobs", url: "#" },
-                  { text: "Subscription", url: "#" },
-                  { text: "CPSC Certificates", url: "#" },
-                  { text: "Ratings", url: "#" },
-                  { text: "Shop Help", url: "#" },
-                  { text: "Contact Us", url: "#" },
-               ],
-            },
-            {
-               text: "sites",
-               list: [
-                  { text: "DC", url: "#" },
-                  { text: "MAD Magazine", url: "#" },
-                  { text: "DC Kids", url: "#" },
-                  { text: "DC Universe", url: "#" },
-                  { text: "DC Power Visa", url: "#" },
-               ],
-            },
-         ],
-      };
+      return {};
    },
 };
 </script>
