@@ -1,25 +1,9 @@
 <template>
    <div id="bottom-jumbo">
       <div class="container">
-         <div class="card">
-            <img src="../assets/img/buy-comics-digital-comics.png" alt="DC" />
-            <h3>Digital comics</h3>
-         </div>
-         <div class="card">
-            <img src="../assets/img/buy-comics-merchandise.png" alt="DC" />
-            <h3>merchandise</h3>
-         </div>
-         <div class="card">
-            <img src="../assets/img/buy-comics-shop-locator.png" alt="DC" />
-            <h3>comic shop locator</h3>
-         </div>
-         <div class="card">
-            <img src="../assets/img/buy-comics-subscriptions.png" alt="DC" />
-            <h3>subscriptions</h3>
-         </div>
-         <div class="card">
-            <img src="../assets/img/buy-dc-power-visa.svg" alt="DC" />
-            <h3>dc power visa</h3>
+         <div v-for="(card, index) in services" :key="index" class="card">
+            <img :src="require(`../assets/img/${card.img}`)" :alt="card.name" />
+            <h3>{{ card.name }}</h3>
          </div>
       </div>
    </div>
@@ -28,6 +12,17 @@
 <script>
 export default {
    name: "BottomJumbo",
+   data() {
+      return {
+         services: [
+            { name: "Digital comics", img: "buy-comics-digital-comics.png" },
+            { name: "merchandise", img: "buy-comics-merchandise.png" },
+            { name: "comic shop locator", img: "buy-comics-shop-locator.png" },
+            { name: "subscriptions", img: "buy-comics-subscriptions.png" },
+            { name: "dc power visa", img: "buy-dc-power-visa.svg" },
+         ],
+      };
+   },
 };
 </script>
 
