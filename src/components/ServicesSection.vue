@@ -1,18 +1,20 @@
 <template>
    <div id="services-section">
       <div class="container">
-         <div v-for="(badge, index) in servicesList" :key="index" class="badge">
-            <img :src="require(`../assets/img/${badge.img}`)" :alt="badge.name" />
-            <h3>{{ badge.name }}</h3>
-         </div>
+         <Badge v-for="(service, index) in servicesList" :key="index" :badge="service" />
       </div>
    </div>
 </template>
 
 <script>
+import Badge from "./Badge.vue";
+
 export default {
    name: "ServicesSection",
    props: ["servicesList"],
+   components: {
+      Badge,
+   },
    data() {
       return {};
    },
@@ -29,22 +31,6 @@ export default {
 
    .container {
       @include flex_ycenter_space_around();
-   }
-
-   .badge {
-      height: 50%;
-      @include flex_center("y");
-      cursor: pointer;
-
-      img {
-         height: 100%;
-         padding-right: 15px;
-      }
-
-      h3 {
-         text-transform: uppercase;
-         font-weight: 400;
-      }
    }
 }
 </style>
