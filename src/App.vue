@@ -1,8 +1,8 @@
 <template>
    <div id="App">
       <Header />
-      <TopJumbo />
-      <BottomJumbo />
+      <Jumbotron />
+      <ServicesSection />
       <TopFooter />
       <BottomFooter />
    </div>
@@ -10,8 +10,8 @@
 
 <script>
 import Header from "./components/Header.vue";
-import TopJumbo from "./components/TopJumbo.vue";
-import BottomJumbo from "./components/BottomJumbo.vue";
+import Jumbotron from "./components/Jumbotron.vue";
+import ServicesSection from "./components/ServicesSection.vue";
 import TopFooter from "./components/TopFooter.vue";
 import BottomFooter from "./components/BottomFooter.vue";
 
@@ -19,8 +19,8 @@ export default {
    name: "App",
    components: {
       Header,
-      TopJumbo,
-      BottomJumbo,
+      Jumbotron,
+      ServicesSection,
       TopFooter,
       BottomFooter,
    },

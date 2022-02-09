@@ -77,8 +77,7 @@ export default {
 
 #top-footer {
    color: #fff;
-   height: 100vh;
-   max-height: calc(100vh - 500px);
+   height: 430px;
    background: url(../assets/img/footer-bg.jpg);
    @include bg_cov_norep_cent();
 

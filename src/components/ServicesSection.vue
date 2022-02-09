@@ -1,5 +1,5 @@
 <template>
-   <div id="bottom-jumbo">
+   <div id="services-section">
       <div class="container">
          <div v-for="(card, index) in services" :key="index" class="card">
             <img :src="require(`../assets/img/${card.img}`)" :alt="card.name" />
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-   name: "BottomJumbo",
+   name: "ServicesSection",
    data() {
       return {
          services: [
@@ -29,7 +29,7 @@ export default {
 <style scoped lang="scss">
 @import "../assets/sass/_mixins.scss";
 
-#bottom-jumbo {
+#services-section {
    height: 140px;
    background-color: #0282f9;
    color: #fff;
